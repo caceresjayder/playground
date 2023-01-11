@@ -1,0 +1,228 @@
+.restaurant{
+    background-color: #243763;
+    min-height: 100vh;
+    min-width: 100vw;
+}
+
+.header{
+    height: 150px;
+    background-color: #FF6E31;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hamImg{
+    width: 200px;
+    position: absolute;
+    bottom: -100px;
+    -webkit-filter: drop-shadow(5px 5px 5px #222);
+    filter: drop-shadow(5px 5px 35px #222)
+}
+
+.navCar{
+    display: flex;
+    height: 350px;
+    margin-top: 100px;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav{
+    height: 100%;
+    width: 60%;
+    border: 4px solid #FF6E31;
+    margin: 0px 12px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.nav button{
+    height: 50px;
+    width: 100%;
+    background-color: #FF6E31;
+    border: none;
+    margin: 4px 0;
+    padding: 10px;
+}
+
+.nav button:active{
+    background-color: #FFEBB7;
+    color: #AD8E70;
+}
+
+.carrusel{
+    margin: 150px 0px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.carruselContent{
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+}
+
+.imgCarrusel{
+    width: 100%;
+    height: 100%;
+}
+
+.foot{
+    margin-top: 40px;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.foot div{
+    width: 33%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.foot p{
+    color:#FFEBB7;
+    margin: 4px 0;
+}
+
+.rigthside a{
+    text-decoration: none;
+    color: #FFEBB7;
+}
+
+.center{
+    background-color: #FF6E31;
+    height: 250px;
+}
+
+.disabled{
+    display: none;
+}
+
+.modal{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background-color: rgba(#222, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal img{
+    height: 60%;
+}
+
+.modalContainer{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modalContainer button{
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    right: -30px;
+    top: 10px;
+    text-align: center;
+    background-color: #FF6E31;
+    border: none;
+}
+
+@media (min-width: 1000px){
+    .navCar{
+        width: 1200px;
+        justify-content: center;
+    }
+    .container{
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+         justify-content: center;
+     }
+}
+
+@media (max-width: 600px){
+    
+    .hamImg{
+        width: 150px;
+        height: 180px;
+        bottom: -70px;
+    }
+    .container{
+        margin-top: 80px;
+        position: relative;
+
+    }
+    .navCar{
+        width: 100%;
+        flex-direction: column;
+        position: relative;
+        margin: 0;
+        justify-content: normal;
+        height: 600px;
+    }
+
+    .nav{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        position: relative;
+        padding: 0;
+        margin: 0;
+        width: 90%;
+        height: fit-content;
+    }
+
+    .nav button{
+        margin: 4px 4px;
+        width: fit-content;
+        height: fit-content;
+ font-weight: bold;
+
+    }
+
+    .carrusel{
+        margin: 8px;
+    }
+
+    .modal{
+        width: 100%;
+        height: 100%;
+    }
+
+    .modal img{
+        width: 90%;
+        object-fit:cover;
+    }
+.modalContainer button{
+ right: 40px;
+ top: -40px;
+}
+
+.center{
+    height: 150px;
+}
+
+.modal img{
+    width: 300px;
+}
+
+}
