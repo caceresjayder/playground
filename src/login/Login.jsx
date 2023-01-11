@@ -20,7 +20,6 @@ function Login() {
   function addAccount(obj) {
     let newAccounts = [...account, obj];
     setAccount(newAccounts);
-    console.log(account)
   }
 
   function Logger(obj) {

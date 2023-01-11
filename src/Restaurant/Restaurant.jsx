@@ -16,7 +16,6 @@ export default function Restaurant() {
   let [modal, setModal] = useState(modalProps);
 
   function openMenu(str) {
-    console.log("click");
     if (str === "Lunch Menu") {
       setModal(
         (modal = {
