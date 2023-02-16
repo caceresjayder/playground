@@ -1,12 +1,8 @@
 import React, { useState } from "react";
-import Router from "next/router";
-import WaitingPage from "./WaitingPage";
 import {
-  Button,
   Heading,
   HStack,
   Stack,
-  VStack,
 } from "@chakra-ui/react";
 import Links from './Links';
 

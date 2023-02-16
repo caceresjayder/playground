@@ -1,8 +1,8 @@
 import { Button, Stack, IconButton } from "@chakra-ui/react";
 import { AddIcon } from "@chakra-ui/icons";
 import React, {useState} from "react";
-import TaskContainer from './containers/TasksContainer'
 import Styles from './styles/toDoApp.module.scss'
+import Task from "./components/Task";
 
 const tasks = [{"taskText":"Hi User!, this is too easy toDo, first, write text above and press the add button, if you complete the task just make click in the text, if you want to delete the task just click into de close mark (X)","status":"notCompleted"}]
 const string = ""
@@ -42,11 +42,18 @@ function ToDoApp(){
                 onChange={char => setInput(char.target.value)}/>
                 <IconButton aria-label="Add Task" icon={<AddIcon/>} className={Styles.button} onClick={newTask}/>
                 </div>
-                <TaskContainer  
-                Styles={Styles} 
-                tasks={task} 
+                <div className={Styles.TaskContainer}>
+            {task.map(task => {
+                return <Task 
+                taskText={task.taskText} 
+                Text={task.taskText} 
+                key={tasks.indexOf(task)} 
+                Styles={Styles}
                 onComplete={CompleteTask}
-                onDelete={deleteTask}/>
+                status={task.status}
+                onDelete={deleteTask}
+                />})}
+        </div>
            
         </div>
         </Stack>

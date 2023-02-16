@@ -1,7 +1,14 @@
 import React, { useState } from "react";
+import {
+  Modal,
+  ModalOverlay,
+  ModalContent,
+  ModalBody,
+  ModalCloseButton,
+  Text
+} from "@chakra-ui/react";
 import SignIn from "./containers/SignIn";
 import Register from "./containers/Register";
-import Modal from "./components/Modal";
 import Styles from "./styles/Styles.module.scss";
 
 const accounts = [];
@@ -88,7 +95,17 @@ function Login() {
       ) : (
         <Register styles={Styles} addAccount={addAccount} onCheck={check}/>
       )}
-      <Modal order={modalprops} Styles={Styles} onClose={closeModal}/>;
+      <Modal isOpen={modalprops.isActive} onClose={closeModal}>
+        <ModalOverlay />
+        <ModalContent top={70} h={200} alignItems="center">
+          <ModalCloseButton/>
+          <ModalBody>
+            <Text mt={59} fontSize="2xl">
+            {modalprops.message}
+            </Text>
+          </ModalBody>
+        </ModalContent>
+      </Modal>
     </div>
   );
 }
