@@ -20,7 +20,7 @@ export default function Carrusel(props){
     return(
         <div className={props.Styles.carrusel}>
             <div className={props.Styles.carruselContent}>
-                <Image src={CarruselImgs[state]} className={props.Styles.imgCarrusel} width={300} height={300} alt="carrusel-images"/>
+                <Image src={CarruselImgs[state]} priority="low" className={props.Styles.imgCarrusel} width={300} height={300} alt="carrusel-images"/>
             </div>
         </div>
     )
